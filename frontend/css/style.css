@@ -14,31 +14,24 @@ body {
    NAVBAR
 ========================= */
 
-/* .lexzo-navbar {
-    padding: 24px 0;
-    background-color: #f5f1ea;
-} */
-
 .lexzo-navbar {
     position: sticky;
     top: 0;
     z-index: 1000;
 
     padding: 10px 0;
-    /* background-color: #f5f1ea; */
 
-    background: rgba(245, 241, 234, 0.55);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
- /* background: transparent; */
-    /* box-shadow: 0 1px 0 rgba(29, 27, 24, 0.08); */
+    background-color: #f5f1ea;
+
+   
 }
+
 
 
 /* Logo */
 
 .lexzo-logo img {
-    width: 120px;
+    width: 105px;
     height: auto;
     display: block;
 }
@@ -92,14 +85,43 @@ body {
    HERO SECTION
 ========================= */
 
-.hero-section {
-    min-height: calc(100vh - 90px);
-    display: flex;
+
+
+.hero-section { 
+    position: relative;
+    min-height: calc(100vh - 90px); 
+    display: flex; 
     align-items: center;
+
+    background-image: url("../images/Minimalist-Coffee.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+
+.hero-row { 
+    min-height: calc(100vh - 90px);
+    position: relative;
+    z-index: 2;
 }
 
-.hero-row {
-    min-height: calc(100vh - 90px);
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(245, 241, 234, 0.45) 0%,
+        rgba(245, 241, 234, 0.20) 35%,
+        rgba(245, 241, 234, 0.02) 70%,
+        rgba(245, 241, 234, 0) 100%
+    );
+    z-index: 0;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -210,23 +232,6 @@ body {
     padding: 30px 0;
 }
 
-/* .hero-image {
-    width: 100%;
-    height: 68vh;
-
-    overflow: hidden;
-}
-
-.hero-image img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    transition: transform 0.8s ease;
-} */
-
-
 .hero-cup {
     position: relative;
     width: 100%;
@@ -329,32 +334,22 @@ body {
 
 .steam {
     position: absolute;
-
-    top: 12%;
-    left: 50%;
-
-    width: 120px;
-    height: 150px;
-
+    top: 22%;
+    left: 74%;
+    width: 220px;
+    height: 220px;
     transform: translateX(-50%);
-
-    z-index: 5;
+    z-index: 2;
 }
 
 .steam span {
     position: absolute;
-
     bottom: 0;
-
-    width: 20px;
-    height: 100px;
-
-    border-left: 4px solid rgba(255, 255, 255, 0.35);
-
+    width: 35px;
+    height: 170px;
+    border-left: 5px solid rgba(255, 255, 255, 0.5);
     border-radius: 50%;
-
     opacity: 0;
-
     animation: steamRise 4s ease-in-out infinite;
 }
 
@@ -363,14 +358,14 @@ body {
 }
 
 .steam span:nth-child(2) {
-    left: 48px;
-    height: 120px;
+    left: 70px;
+    height: 160px;
     animation-delay: 1.2s;
 }
 
 .steam span:nth-child(3) {
-    left: 85px;
-    height: 95px;
+    left: 130px;
+    height: 135px;
     animation-delay: 2.2s;
 }
 
@@ -1392,16 +1387,34 @@ body {
 
 @media (max-width: 991px) {
 
-    .hero-section {
+    /* .hero-section {
         min-height: auto;
+    } */
+
+     .hero-section {
+        min-height: calc(100svh - 90px);
+         background-position: 68% 40%;
+    }
+
+     .hero-section::before {
+        background: linear-gradient(
+            to bottom,
+            rgba(245, 241, 234, 0.75) 0%,
+            rgba(245, 241, 234, 0.45) 45%,
+            rgba(245, 241, 234, 0.20) 100%
+        );
     }
 
     .hero-row {
         min-height: auto;
     }
 
-    .hero-content {
+    /* .hero-content {
         padding: 70px 25px 40px;
+    } */
+
+     .hero-content {
+        padding: 50px 25px 30px;
     }
 
     .hero-title {
@@ -1409,9 +1422,21 @@ body {
         letter-spacing: -3px;
     }
 
-    .hero-description {
+    /* .hero-description {
         margin-top: 30px;
-    }
+    } */
+
+     /* .hero-description {
+        max-width: 340px;
+        color: #3f3a35;
+    } */
+
+    .hero-description {
+    max-width: 340px;
+    color: #3f3a35;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
 
     .hero-image-wrapper {
         padding: 20px 25px 50px;
@@ -1797,16 +1822,33 @@ html {
 }
 
 
-.hero-cup {
+/* .hero-cup {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+} */
+
+.hero-cup {
+    position: relative;
+    width: 100%;
+    height: 68vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.hero-cup-image {
+/* .hero-cup-image {
     width: 100%;
     max-width: 350px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+} */
+
+.hero-cup-image {
+    width: 130%;
+    max-width: none;
     height: auto;
     display: block;
     object-fit: contain;
