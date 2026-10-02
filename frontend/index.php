@@ -153,21 +153,7 @@ foreach ($categories as $category) {
                     LEXZO COFFEE · KUALA KANGSAR
                 </p>
 
-                <!-- <h1 class="hero-title" id="hero-title">
-                    RELAX<br>
-                    MEANS<br>
-                    <span>COFFEE.</span>
-                </h1> -->
-
-                <!-- <h1 class="hero-title" id="hero-title">
-                    RELAX<br>
-                    MEANS <span>COFFEE.</span>
-                </h1>
-
-                <p class="hero-description" id="hero-description">
-                    A place to slow down, sip something good,
-                    and stay a little longer.
-                </p> -->
+              
 
                 <h1 class="hero-title" id="hero-title"></h1>
 
@@ -187,101 +173,31 @@ foreach ($categories as $category) {
 
             </div>
 
-
-            <!-- Hero Image -->
-            <!-- <div class="col-lg-6 hero-image-wrapper"> -->
-
-                <!-- <div class="hero-image">
-
-                    <img
-                        src="images/hero-coffee.jpeg"
-                        alt="Lexzo Coffee">
-
-                </div> -->
-
-                <!-- <div class="hero-image"> -->
-
-                    <!-- <img
-                        src="images/hero-coffee.jpeg"
-                        alt="Lexzo Coffee"> -->
-
-                        <!-- <div class="hero-cup">
-
-                            <div class="steam">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-
-                            <div class="cup">
-                                <div class="cup-top">
-                                    <div class="coffee"></div>
-                                </div>
-
-                                <div class="cup-body"></div>
-
-                                <div class="cup-handle"></div>
-                            </div>
-
-                        </div> -->
-
-                    <!-- Coffee Steam -->
-                    <!-- <div class="coffee-steam" aria-hidden="true">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-
-                </div>
-
-            </div> -->
-
-            <!-- <div class="col-lg-6 hero-image-wrapper">
-
-                <div class="hero-cup">
-
-                    <div class="steam">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-
-                    <div class="cup">
-
-                        <div class="cup-top">
-                            <div class="coffee"></div>
-                        </div>
-
-                        <div class="cup-body"></div>
-
-                        <div class="cup-handle"></div>
-
-                    </div>
-
-                </div>
-
-            </div> -->
-
             <div class="col-lg-6 hero-image-wrapper">
 
             <div class="hero-cup">
 
 
 
-                <div class="steam">
+                <!-- <div class="steam">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </div> -->
 
-                <img
+                <!-- <img
                     src="images/lexzo-coffee-cup.png"
+                    alt="Lexzo Coffee"
+                    class="hero-cup-image"> -->
+
+                    <!-- <img
+                    src="images/Minimalist-Coffee.png"
                     alt="Lexzo Coffee"
                     class="hero-cup-image">
 
             </div>
 
-        </div>
+        </div> -->
 
         </div>
 
@@ -318,22 +234,7 @@ foreach ($categories as $category) {
         </div>
 
 
-        <!-- Menu Categories -->
-        <!-- <div class="menu-categories">
-
-            <a href="#coffee" class="menu-category active">
-                Coffee
-            </a>
-
-            <a href="#food" class="menu-category">
-                Food
-            </a>
-
-            <a href="#bites" class="menu-category">
-                Light Bites
-            </a>
-
-        </div> -->
+      
 
         <div class="menu-categories">
 
@@ -602,15 +503,7 @@ foreach ($categories as $category) {
                         OPENING HOURS
                     </span>
 
-                    <!-- <p>
-                        Monday – Saturday<br>
-                        10:00 AM – 11:30 PM
-                    </p>
-
-                    <p>
-                        Sunday<br>
-                        4:00 PM – 11:30 PM
-                    </p> -->
+                  
 
                     <p id="visit-opening-hours">
                         Monday – Saturday
