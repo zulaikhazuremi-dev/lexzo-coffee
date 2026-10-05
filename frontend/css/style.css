@@ -404,7 +404,22 @@ body {
 
 .menu-section {
     padding: 50px 0;
-    background-color: #ebe5da;
+    /* background-color: #ebe5da; */
+    background: #e2d8c8;
+    /* background-image:
+        radial-gradient(
+            rgba(80, 60, 40, 0.05) 1px,
+            transparent 1px
+        );
+    background-size: 18px 18px; */
+    background-image:
+        linear-gradient(
+            rgba(226, 216, 200, 0.80),
+            rgba(226, 216, 200, 0.80)
+        ),
+        url("../images/menu-pattern.png");
+    background-repeat: repeat;
+    background-size: auto, 700px auto;
 }
 
 
@@ -507,7 +522,7 @@ body {
 
 /* Menu Card Image */
 
-.menu-card-image {
+/* .menu-card-image {
     width: 100%;
     height: 250px;
 
@@ -521,6 +536,31 @@ body {
     object-fit: cover;
 
     transition: transform 0.6s ease;
+} */
+
+/* .menu-card-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background-color: #f5f1ea;
+} */
+
+.menu-card-image {
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+    background-color: #f5f1ea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.6s ease;
 }
 
 .menu-card:hover .menu-card-image img {
@@ -530,8 +570,12 @@ body {
 
 /* Menu Card Content */
 
-.menu-card-content {
+/* .menu-card-content {
     padding: 22px 28px;
+} */
+
+.menu-card-content {
+    padding: 24px 40px 32px;
 }
 
 .menu-card-category {
@@ -743,9 +787,9 @@ body {
         margin-bottom: 35px;
     }
 
-    .menu-card-image {
+    /* .menu-card-image {
         height: 250px;
-    }
+    } */
 
     .menu-card-content {
         padding: 24px;
