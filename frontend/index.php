@@ -329,7 +329,7 @@ foreach ($categories as $category) {
      ABOUT SECTION
 ========================= -->
 
-<section class="about-section" id="about">
+<!-- <section class="about-section" id="about">
 
     <div class="container">
 
@@ -349,6 +349,57 @@ foreach ($categories as $category) {
             </div>
 
             <div class="col-lg-6">
+
+                <p class="about-text" id="story-description">
+                    Lexzo Coffee was created as a space where people can
+                    slow down, enjoy quality coffee and spend meaningful
+                    moments with friends and family.
+                </p>
+
+                <p class="about-text">
+                    Whether you're here for your morning coffee, a casual
+                    meeting, or simply a quiet break, Lexzo offers a warm
+                    and comfortable atmosphere designed for everyone.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section> -->
+
+<section class="about-section" id="about">
+
+    <!-- Background Image -->
+    <div class="about-image-wrapper">
+        <div class="about-image">
+            <img
+                src="images/story-coffee.png"
+                alt="Coffee at Lexzo Coffee"
+            >
+        </div>
+    </div>
+
+
+    <!-- Content -->
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6 about-content">
+
+                <p class="section-label">
+                    OUR STORY
+                </p>
+
+                <h2 class="about-title" id="story-title">
+                    More than coffee,
+                    it's a place to unwind.
+                </h2>
+
+                <div class="about-line"></div>
 
                 <p class="about-text" id="story-description">
                     Lexzo Coffee was created as a space where people can
