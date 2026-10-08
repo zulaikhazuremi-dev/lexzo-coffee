@@ -24,10 +24,37 @@ if (!isset($_SESSION["admin_id"])) {
         rel="stylesheet">
 
 </head>
+<style>
+
+    body {
+    background-color: #f5f1ea;
+    color: #1d1b18;
+}
+
+.lexzo-navbar {
+    background-color: #1d1b18;
+}
+
+.card {
+    background-color: #ffffff;
+}
+
+.btn-dark {
+    background-color: #1d1b18;
+    border-color: #1d1b18;
+}
+
+.btn-dark:hover {
+    background-color: #3a3632;
+    border-color: #3a3632;
+}
+
+    </style>
 
 <body>
 
-    <nav class="navbar navbar-dark bg-dark">
+    <!-- <nav class="navbar navbar-dark bg-dark"> -->
+        <nav class="navbar navbar-dark lexzo-navbar">
 
         <div class="container">
 
@@ -161,6 +188,34 @@ if (!isset($_SESSION["admin_id"])) {
             </div>
 
         </div>
+
+
+        <div class="col-md-4">
+
+            <div class="card border-0 shadow-sm h-100">
+
+                <div class="card-body p-4">
+
+                    <h2 class="h4">
+                        Gallery
+                    </h2>
+
+                    <p class="text-muted">
+                        Manage Lexzo Coffee gallery images.
+                    </p>
+
+                    <a
+                        href="gallery.php"
+                        class="btn btn-dark">
+                        Manage Gallery
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
 
         </div>
 

@@ -8,76 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             console.log("Menu data:", data);
 
-            // =========================
-            // RENDER MENU
-            // =========================
-
-            // function renderMenu(categoryId, containerId) {
-
-            //     const menuContainer = document.getElementById(containerId);
-
-            //     if (!menuContainer) {
-            //         return;
-            //     }
-
-            //     const menuItems = data.filter(
-            //         item => item.category_id == categoryId
-            //     );
-
-            //     menuItems.forEach(item => {
-
-            //         menuContainer.innerHTML += `
-            //             <div class="menu-item">
-
-            //                     ${
-            //                         item.image
-            //                             ? `
-            //                                 <div class="menu-item-image mb-3">
-            //                                     <img
-            //                                         src="${item.image}"
-            //                                         alt="${item.name}"
-            //                                         style="
-            //                                             width: 100%;
-            //                                             height: 220px;
-            //                                             object-fit: cover;
-            //                                             border-radius: 10px;
-            //                                         "
-            //                                     >
-            //                                 </div>
-            //                             `
-            //                             : ""
-            //                     }
-
-            //                 <div class="row align-items-start">
-
-            //                     <div class="col">
-
-            //                         <h3 class="menu-item-name">
-            //                             ${item.name}
-            //                         </h3>
-
-            //                         <p class="menu-item-description">
-            //                             ${item.description ?? ""}
-            //                         </p>
-
-            //                     </div>
-
-            //                     <div class="col-auto">
-
-            //                         <span class="menu-item-price">
-            //                             ${item.price_type === "from" ? "From " : ""}
-            //                             RM${item.price}
-            //                         </span>
-
-            //                     </div>
-
-            //                 </div>
-
-            //             </div>
-            //         `;
-
-            //     });
-            // }
+          
 
             function renderMenu(categoryId, containerId) {
 
@@ -319,6 +250,55 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch(error => {
         console.error("Error fetching website content:", error);
     });
+
+
+    fetch("../backend/api/content.php")
+    .then(response => response.json())
+    .then(contents => {
+
+        // Hero
+        // Story
+        // Space
+        // Visit
+
+    })
+    .catch(error => {
+        console.error("Error fetching website content:", error);
+    });
+
+
+// =========================
+// GALLERY
+// =========================
+
+fetch("../backend/api/gallery.php")
+    .then(response => response.json())
+    .then(result => {
+
+        const galleryGrid = document.getElementById("gallery-grid");
+
+        if (!galleryGrid) return;
+
+        result.data.forEach(item => {
+
+            const galleryItem = document.createElement("div");
+            galleryItem.classList.add("gallery-item");
+
+            const img = document.createElement("img");
+
+            img.src = item.image;
+            img.alt = item.title || "Lexzo Coffee";
+
+            galleryItem.appendChild(img);
+            galleryGrid.appendChild(galleryItem);
+
+        });
+
+    })
+    .catch(error => {
+        console.error("Error fetching gallery:", error);
+    });
+
 
     // =========================
 // HOMEPAGE MENU CATEGORY TABS

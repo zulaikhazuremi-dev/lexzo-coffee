@@ -501,6 +501,34 @@ foreach ($categories as $category) {
 
 </section>
 
+
+<!-- =========================
+     GALLERY SECTION
+========================= -->
+
+<section class="gallery-section" id="gallery">
+
+    <div class="container">
+
+        <div class="gallery-heading">
+
+            <p class="section-label">
+                GALLERY
+            </p>
+
+            <h2 class="gallery-title">
+                Gallery of Happiness
+            </h2>
+
+        </div>
+
+
+       <div class="gallery-grid" id="gallery-grid"></div>
+
+    </div>
+
+</section>
+
 <!-- =========================
      VISIT US SECTION
 ========================= -->
