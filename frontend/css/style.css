@@ -1202,10 +1202,32 @@ body {
    VISIT US
 ========================= */
 
-.visit-section {
-    padding: 25px 0;
+/* .visit-section {
+    padding: 45px 0 100px;
     background-color: #f5f1ea;
+     background-image: linear-gradient(
+        135deg,
+        #f8f5ef 0%,
+        #f5f1ea 50%,
+        #eee7dc 100%
+    );
+} */
+
+
+.visit-section {
+    padding: 45px 0 100px;
+    background-color: #f5f1ea;
+    background-image:
+        linear-gradient(
+            rgba(245, 241, 234, 0.45),
+            rgba(245, 241, 234, 0.45)
+        ),
+        url("../images/visit-paper-texture.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
+
 
 
 /* =========================
@@ -1231,9 +1253,8 @@ body {
 
 .visit-title {
     margin: 0;
-
     font-family: Georgia, serif;
-    font-size: clamp(3.5rem, 5vw, 5.5rem);
+    font-size: clamp(3.2rem, 4.5vw, 5rem);
 
     font-weight: 400;
     line-height: 0.95;
@@ -1245,8 +1266,8 @@ body {
 .visit-description {
     max-width: 500px;
 
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 28px;
+    margin-bottom: 35px;
 
     color: #5f5a54;
 
@@ -1260,10 +1281,81 @@ body {
 ========================= */
 
 .visit-item {
-    padding: 9px 0;
-
+    padding: 12px 0;
     border-top: 1px solid #cfc8bd;
 }
+
+
+/* Visit Contact Links */
+.visit-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 10px;
+}
+
+.visit-contact-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px;
+    color: #1d1b19;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    transition: background-color 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.visit-contact-link:hover {
+    background-color: #eee7dc;
+    border-color: #d8cbbb;
+    color: #1d1b19;
+}
+
+.visit-contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    background-color: #e8dfd2;
+    border-radius: 6px;
+    color: #54351f;
+    font-size: 18px;
+}
+
+.visit-contact-text {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.visit-contact-text small {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #795034;
+}
+
+.visit-contact-text > span {
+    font-size: 15px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.visit-contact-arrow {
+    flex-shrink: 0;
+    font-size: 16px;
+    transition: transform 0.25s ease;
+}
+
+.visit-contact-link:hover .visit-contact-arrow {
+    transform: translate(3px, -3px);
+}
+
 
 
 .visit-item:last-of-type {
@@ -1293,6 +1385,31 @@ body {
     font-size: 15px;
     line-height: 1.7;
 }
+
+
+
+.opening-hours-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 12px;
+}
+
+
+.opening-hours-day p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+@media (max-width: 480px) {
+    .opening-hours-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+
 
 
 .visit-item p + p {
@@ -1424,7 +1541,7 @@ body {
 }
 
 
-.map-overlay a {
+/* .map-overlay a {
     color: #1d1b18;
 
     font-size: 12px;
@@ -1435,12 +1552,36 @@ body {
     text-decoration: none;
 
     border-bottom: 1px solid #1d1b18;
-}
+} */
 
+
+/* .map-overlay a:hover {
+    color: #6b4f3a;
+} */
+
+
+.map-overlay a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    color: #1d1b19;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid #1d1b19;
+    padding-bottom: 4px;
+    transition: color 0.25s ease,
+                border-color 0.25s ease,
+                gap 0.25s ease;
+}
 
 .map-overlay a:hover {
-    color: #6b4f3a;
+    color: #795034;
+    border-color: #795034;
+    gap: 12px;
 }
+
 
 
 /* =========================

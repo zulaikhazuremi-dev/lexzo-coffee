@@ -8,8 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             console.log("Menu data:", data);
 
-          
-
             function renderMenu(categoryId, containerId) {
 
                 const menuContainer = document.getElementById(containerId);
@@ -195,9 +193,35 @@ document.addEventListener("DOMContentLoaded", function () {
             const visitLocationName = document.getElementById("visit-location-name");
             const visitMapLink = document.getElementById("visit-map-link");
 
+         
+
+            
             if (visitOpeningHours && visit.opening_hours) {
-                visitOpeningHours.textContent = visit.opening_hours;
+                const hours = visit.opening_hours
+                    .split(/\n/)
+                    .map(line => line.trim())
+                    .filter(Boolean);
+
+                visitOpeningHours.replaceChildren();
+
+                for (let i = 0; i < hours.length; i += 2) {
+                    const dayGroup = document.createElement("div");
+                    dayGroup.classList.add("opening-hours-day");
+
+                    const day = document.createElement("p");
+                    day.textContent = hours[i];
+                    dayGroup.appendChild(day);
+
+                    if (hours[i + 1]) {
+                        const time = document.createElement("p");
+                        time.textContent = hours[i + 1];
+                        dayGroup.appendChild(time);
+                    }
+
+                    visitOpeningHours.appendChild(dayGroup);
+                }
             }
+
 
 
             if (visitTitle && visit.title) {
@@ -212,10 +236,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 visitAddress.textContent = visit.address;
             }
 
-             // Phone
-            if (visitPhone && visit.phone) {
+         
 
-                visitPhone.textContent = visit.phone;
+            const visitPhoneNumber = document.getElementById("visit-phone-number");
+
+            if (visitPhone && visit.phone) {
+                if (visitPhoneNumber) {
+                    visitPhoneNumber.textContent = visit.phone;
+                }
 
                 let phoneNumber = visit.phone.replace(/\D/g, "");
 

@@ -72,6 +72,9 @@ foreach ($categories as $category) {
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 </head>
 
 
@@ -542,20 +545,11 @@ foreach ($categories as $category) {
             <!-- Visit Information -->
             <div class="col-lg-5 visit-content">
 
-                <p class="section-label">
-                    VISIT US
-                </p>
+                <p class="section-label">VISIT US</p>
 
-                <h2 class="visit-title">
-                    Come by,<br>
-                    stay a while.
-                </h2>
+                <h2 class="visit-title" id="visit-title"></h2>
 
-                <p class="visit-description">
-                    Whether you're meeting friends, enjoying a quiet
-                    coffee, or simply taking a break, we'd love to have
-                    you here.
-                </p>
+                <p class="visit-description" id="visit-description"></p>
 
 
                 <!-- Address -->
@@ -566,55 +560,60 @@ foreach ($categories as $category) {
                     </span>
 
                     <p id="visit-address">
-                        7A, Jalan Tun Razak,<br>
-                        Taman Mawar,<br>
-                        33000 Kuala Kangsar,<br>
-                        Perak, Malaysia
+                       
                     </p>
 
                 </div>
 
-
                 <!-- Opening Hours -->
                 <div class="visit-item">
-
                     <span class="visit-item-label">
                         OPENING HOURS
                     </span>
 
-                  
-
-                    <p id="visit-opening-hours">
-                        Monday – Saturday
-                        10:00 AM – 11:30 PM
-
-                        Sunday
-                        4:00 PM – 11:30 PM
-                    </p>
-
+                    <div class="opening-hours-grid" id="visit-opening-hours"></div>
                 </div>
-
-
-                <!-- Phone -->
+                
+                <!-- Phone & WhatsApp -->
                 <div class="visit-item">
+                    <span class="visit-item-label">CONTACT</span>
 
-                    <span class="visit-item-label">
-                        PHONE
-                    </span>
+                    <div class="visit-contact-list">
 
-                    <p>
-                        <a id="visit-phone" href="tel:+60195670054">
-                            019-567 0054
+                        <a id="visit-phone" class="visit-contact-link" href="#">
+                            <span class="visit-contact-icon">
+                                <i class="bi bi-telephone"></i>
+                            </span>
+
+                            <span class="visit-contact-text">
+                                <small>CALL US</small>
+                                 <span id="visit-phone-number"></span>
+                            </span>
+
+                            <i class="bi bi-arrow-up-right visit-contact-arrow"></i>
                         </a>
-                    </p>
 
-                    <a id="visit-whatsapp" href="https://wa.me/60195670054"
-                    class="whatsapp-link"
-                    target="_blank">
-                        WhatsApp us →
-                    </a>
+                        <a id="visit-whatsapp"
+                        class="visit-contact-link"
+                        target="_blank"
+                        rel="noopener noreferrer">
 
+                            <span class="visit-contact-icon">
+                                <i class="bi bi-whatsapp"></i>
+                            </span>
+
+                            <span class="visit-contact-text">
+                                <small>HAVE A QUESTION?</small>
+                                <span>Chat with us on WhatsApp</span>
+                            </span>
+
+                            <i class="bi bi-arrow-up-right visit-contact-arrow"></i>
+                        </a>
+
+                    </div>
                 </div>
+
+
 
 
                 
